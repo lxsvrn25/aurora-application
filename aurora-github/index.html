@@ -25,7 +25,7 @@
     }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--cream);font-family:'Playfair Display',Georgia,serif;font-size:16px;line-height:1.7;overflow-x:hidden}
+    body{background:var(--bg);color:var(--cream);font-family:'Playfair Display',Georgia,serif;font-size:16px;line-height:1.82;overflow-x:hidden}
 
     /* ── AURORA BG ── */
     #aurora-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;transition:opacity .12s linear}
@@ -79,7 +79,7 @@
     /* ── LABELS ── */
     .cl{font-family:-apple-system,system-ui,sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
     .ml{font-family:-apple-system,system-ui,sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-    .cb{font-family:-apple-system,system-ui,sans-serif;font-size:13px;line-height:1.6;color:var(--muted)}
+    .cb{font-family:-apple-system,system-ui,sans-serif;font-size:13px;line-height:1.82;color:var(--muted)}
 
     /* ── PULL QUOTE ── */
     .pq{font-size:clamp(18px,2.4vw,25px);font-style:italic;line-height:1.45;border-left:2px solid var(--teal);padding-left:26px;margin:44px 0;color:var(--cream)}
@@ -150,7 +150,7 @@
     .ncc:hover{border-color:var(--bh);box-shadow:0 0 28px rgba(45,212,191,.04)}
     .ncc-cat{font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px}
     .ncc-cap{font-size:17px;font-weight:400;line-height:1.3;margin-bottom:12px;color:var(--cream)}
-    .ncc-body{font-family:-apple-system,system-ui,sans-serif;font-size:12px;color:var(--muted);line-height:1.65}
+    .ncc-body{font-family:-apple-system,system-ui,sans-serif;font-size:12px;color:var(--muted);line-height:1.85}
     .ncc-names{font-family:-apple-system,system-ui,sans-serif;font-size:11px;color:var(--dim);margin-top:10px;line-height:1.6}
     /* ── GANTT ── */
     .gantt{margin:40px 0;overflow-x:auto}
@@ -267,9 +267,9 @@
     .pp-num{font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
     .pp-title{font-size:18px;font-weight:400;line-height:1.25;color:var(--cream);margin-bottom:18px}
     .pp-list{list-style:none;padding:0;flex:1;display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
-    .pp-list li{font-family:-apple-system,system-ui,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;padding-left:16px;position:relative}
-    .pp-list li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:1px;background:rgba(45,212,191,.4)}
-    .pp-target{font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding:6px 14px;border:1px solid rgba(184,145,74,.28);border-radius:10px;display:inline-block;align-self:flex-start}
+    .pp-list li{font-family:-apple-system,system-ui,sans-serif;font-size:11px;color:var(--dim);line-height:1.65;padding-left:16px;position:relative}
+    .pp-list li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:1px;background:rgba(45,212,191,.25)}
+    .pp-target{font-family:-apple-system,system-ui,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:7px 16px;border:1px solid rgba(184,145,74,.32);border-radius:10px;display:inline-block;align-self:flex-start;font-weight:500}
     .pp-target-teal{color:var(--teal)!important;border-color:rgba(45,212,191,.38)!important}
     /* ── CHANNEL STRIP ── */
     .ch-strip{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--border);border-radius:12px;overflow:hidden}
@@ -403,6 +403,59 @@
     <div class="card ct fi d4" style="margin-top:18px;display:grid;grid-template-columns:1fr 2fr;gap:28px;align-items:start">
       <div><div class="ml">The Intelligence Layer</div><h3 style="line-height:1.3">AI doesn't execute.<br>It makes you <em>indispensable.</em></h3></div>
       <p class="cb" style="margin-top:0;font-size:13px;line-height:1.75">Aurora's AI doesn't respond to requests — it learns what time means to each specific member. The concierge layer is visible. The intelligence is structural. A member who has transferred their cognitive load to Aurora can't simply cancel; they'd need to rebuild the entire framework of how they manage their life. That dependency is the moat. That's what makes magnetism scalable.</p>
+    </div>
+
+    <!-- Intelligence Layer Abstract Graphic -->
+    <div class="fi d5" style="margin-top:36px;padding:24px 32px;background:rgba(255,255,255,.015);border:1px solid var(--border);border-radius:12px;overflow:hidden;position:relative">
+      <div style="font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-bottom:16px">Intelligence Architecture · Always Learning</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 78" style="width:100%;height:auto;display:block">
+        <defs>
+          <filter id="il-glow">
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <linearGradient id="il-line" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#818cf8" stop-opacity="0.25"/>
+          </linearGradient>
+        </defs>
+        <!-- Input cluster → core → output cluster -->
+        <!-- Input lines -->
+        <line x1="62" y1="16" x2="218" y2="39" stroke="rgba(45,212,191,.18)" stroke-width="0.8"/>
+        <line x1="56" y1="39" x2="218" y2="39" stroke="rgba(45,212,191,.22)" stroke-width="1"/>
+        <line x1="62" y1="62" x2="218" y2="39" stroke="rgba(45,212,191,.18)" stroke-width="0.8"/>
+        <line x1="30" y1="28" x2="218" y2="39" stroke="rgba(45,212,191,.10)" stroke-width="0.6"/>
+        <line x1="30" y1="52" x2="218" y2="39" stroke="rgba(45,212,191,.10)" stroke-width="0.6"/>
+        <!-- Core to output line -->
+        <line x1="230" y1="39" x2="470" y2="39" stroke="url(#il-line)" stroke-width="1.4"/>
+        <!-- Output lines -->
+        <line x1="470" y1="39" x2="634" y2="16" stroke="rgba(129,140,248,.18)" stroke-width="0.8"/>
+        <line x1="470" y1="39" x2="640" y2="39" stroke="rgba(129,140,248,.22)" stroke-width="1"/>
+        <line x1="470" y1="39" x2="634" y2="62" stroke="rgba(129,140,248,.18)" stroke-width="0.8"/>
+        <line x1="470" y1="39" x2="666" y2="27" stroke="rgba(129,140,248,.10)" stroke-width="0.6"/>
+        <line x1="470" y1="39" x2="666" y2="52" stroke="rgba(129,140,248,.10)" stroke-width="0.6"/>
+        <!-- Input nodes -->
+        <circle cx="62" cy="16" r="3" fill="rgba(45,212,191,.18)" stroke="#2dd4bf" stroke-width="0.7"/>
+        <circle cx="56" cy="39" r="3.5" fill="rgba(45,212,191,.22)" stroke="#2dd4bf" stroke-width="0.8"/>
+        <circle cx="62" cy="62" r="3" fill="rgba(45,212,191,.18)" stroke="#2dd4bf" stroke-width="0.7"/>
+        <circle cx="30" cy="28" r="2" fill="rgba(45,212,191,.12)" stroke="#2dd4bf" stroke-width="0.6"/>
+        <circle cx="30" cy="52" r="2" fill="rgba(45,212,191,.12)" stroke="#2dd4bf" stroke-width="0.6"/>
+        <!-- Output nodes -->
+        <circle cx="634" cy="16" r="3" fill="rgba(129,140,248,.18)" stroke="#818cf8" stroke-width="0.7"/>
+        <circle cx="640" cy="39" r="3.5" fill="rgba(129,140,248,.22)" stroke="#818cf8" stroke-width="0.8"/>
+        <circle cx="634" cy="62" r="3" fill="rgba(129,140,248,.18)" stroke="#818cf8" stroke-width="0.7"/>
+        <circle cx="666" cy="27" r="2" fill="rgba(129,140,248,.12)" stroke="#818cf8" stroke-width="0.6"/>
+        <circle cx="666" cy="52" r="2" fill="rgba(129,140,248,.12)" stroke="#818cf8" stroke-width="0.6"/>
+        <!-- Core intelligence node (teal glow) -->
+        <circle cx="224" cy="39" r="10" fill="rgba(45,212,191,.04)" stroke="rgba(45,212,191,.2)" stroke-width="0.8"/>
+        <circle cx="224" cy="39" r="5.5" fill="rgba(45,212,191,.22)" stroke="#2dd4bf" stroke-width="1.2" filter="url(#il-glow)"/>
+        <!-- Output intelligence node (purple glow) -->
+        <circle cx="466" cy="39" r="8" fill="rgba(129,140,248,.04)" stroke="rgba(129,140,248,.2)" stroke-width="0.8"/>
+        <circle cx="466" cy="39" r="4.5" fill="rgba(129,140,248,.2)" stroke="#818cf8" stroke-width="1" filter="url(#il-glow)"/>
+        <!-- Labels -->
+        <text x="224" y="57" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="7" fill="rgba(45,212,191,.55)" letter-spacing="0.08em">LEARNS</text>
+        <text x="466" y="57" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="7" fill="rgba(129,140,248,.55)" letter-spacing="0.08em">ADAPTS</text>
+      </svg>
     </div>
   </div>
 </section>
@@ -552,7 +605,8 @@
       <div class="ncc">
         <div class="ncc-cat" style="color:#22d3ee">Layer Three · Institutional Brand Partnerships</div>
         <div class="ncc-cap">The most scalable acquisition plays are not individual introductions. They are co-branded programs inside properties where Aurora's member already lives.</div>
-        <p class="ncc-body">AMAN and Four Seasons represent the clearest institutional opportunity. I hold warm introductions to developers and principals behind a number of their flags — not hotel management, but the ownership layer that decides what brands occupy these environments. A co-branded Aurora experience inside an AMAN property does not produce three members. It produces fifty, in a context that self-selects for the most demanding service standard on earth. VERTU's Ruby Key program provides a parallel integration point — their concierge and health tech layer serves the identical client, with a relationship already in place. Yacht broker partnerships offer cost-efficient access to the same audience in a format that consistently outperforms private dining in terms of intimacy and memorability.</p>
+        <p class="ncc-body">AMAN and Four Seasons represent the clearest institutional opportunity. I hold warm introductions to developers and principals behind a number of their flags — not hotel management, but the ownership layer that decides what brands occupy these environments. A co-branded Aurora experience inside an AMAN property does not produce three members. It produces fifty, in a context that self-selects for the most demanding service standard on earth.</p>
+        <p class="ncc-body" style="margin-top:10px">VERTU's Ruby Key program provides a parallel integration point — their concierge and health tech layer serves the identical client, with a relationship already in place. Yacht broker partnerships offer cost-efficient access to the same audience in a format that consistently outperforms private dining in terms of intimacy and memorability.</p>
         <div class="ncc-links">
           <span class="ncc-link">→ AMAN · Four Seasons</span>
           <span class="ncc-link">→ Vertu Ruby Key</span>
@@ -714,22 +768,40 @@
           <div class="ml" style="color:var(--purple)">The Onboarding Ritual</div>
           <h3 style="margin-bottom:16px;font-size:17px">The first 90 days are the product.</h3>
           <p style="font-family:-apple-system,system-ui,sans-serif;font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:22px">Acquisition is the handshake. The ritual is what creates indispensability. Each moment is designed to deepen cognitive transfer.</p>
-          <div style="display:flex;flex-direction:column;gap:0">
-            <div style="display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.04)">
-              <div style="font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.15em;color:var(--teal);min-width:52px;padding-top:2px">Day 1</div>
-              <div><div style="font-family:-apple-system,system-ui,sans-serif;font-size:12px;color:var(--cream);margin-bottom:3px">Identity Moment</div><div style="font-family:-apple-system,system-ui,sans-serif;font-size:11px;color:var(--muted)">Not onboarding — a recognition. Aurora already knows what matters to them.</div></div>
-            </div>
-            <div style="display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.04)">
-              <div style="font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.15em;color:var(--teal);min-width:52px;padding-top:2px">Week 2</div>
-              <div><div style="font-family:-apple-system,system-ui,sans-serif;font-size:12px;color:var(--cream);margin-bottom:3px">First Proof</div><div style="font-family:-apple-system,system-ui,sans-serif;font-size:11px;color:var(--muted)">Aurora handles something that felt impossible before. The emotional baseline shifts.</div></div>
-            </div>
-            <div style="display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.04)">
-              <div style="font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.15em;color:var(--teal);min-width:52px;padding-top:2px">Month 2</div>
-              <div><div style="font-family:-apple-system,system-ui,sans-serif;font-size:12px;color:var(--cream);margin-bottom:3px">Dependency Transfer</div><div style="font-family:-apple-system,system-ui,sans-serif;font-size:11px;color:var(--muted)">Cognitive load moves from the member to the system. Aurora becomes structural.</div></div>
-            </div>
-            <div style="display:flex;gap:16px;padding:14px 0">
-              <div style="font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.15em;color:var(--gold);min-width:52px;padding-top:2px">Month 3</div>
-              <div><div style="font-family:-apple-system,system-ui,sans-serif;font-size:12px;color:var(--cream);margin-bottom:3px">Indispensability</div><div style="font-family:-apple-system,system-ui,sans-serif;font-size:11px;color:var(--muted)">They can't articulate how they managed before. The referral moment follows naturally.</div></div>
+          <!-- Horizontal Stepping-Stone Ritual -->
+          <div style="position:relative;padding:22px 0 8px">
+            <!-- Connecting line behind dots -->
+            <div style="position:absolute;top:39px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(90deg,rgba(45,212,191,.3),rgba(129,140,248,.28),rgba(184,145,74,.35))"></div>
+            <!-- Steps -->
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative">
+              <!-- Day 1 -->
+              <div style="text-align:center;padding:0 8px">
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:10px">Day 1</div>
+                <div style="width:11px;height:11px;border-radius:50%;border:1px solid var(--teal);background:rgba(45,212,191,.16);margin:0 auto 14px;box-shadow:0 0 8px rgba(45,212,191,.35);position:relative;z-index:1"></div>
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:11px;color:var(--cream);margin-bottom:5px;line-height:1.25">Identity<br>Moment</div>
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:10px;color:var(--muted);line-height:1.5">A recognition.<br>Aurora already knows.</div>
+              </div>
+              <!-- Week 2 -->
+              <div style="text-align:center;padding:0 8px">
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:10px">Week 2</div>
+                <div style="width:11px;height:11px;border-radius:50%;border:1px solid var(--teal);background:rgba(45,212,191,.16);margin:0 auto 14px;box-shadow:0 0 7px rgba(45,212,191,.28);position:relative;z-index:1"></div>
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:11px;color:var(--cream);margin-bottom:5px;line-height:1.25">First<br>Proof</div>
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:10px;color:var(--muted);line-height:1.5">Handles the impossible.<br>Baseline shifts.</div>
+              </div>
+              <!-- Month 2 -->
+              <div style="text-align:center;padding:0 8px">
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--purple);margin-bottom:10px">Month 2</div>
+                <div style="width:11px;height:11px;border-radius:50%;border:1px solid var(--purple);background:rgba(129,140,248,.16);margin:0 auto 14px;box-shadow:0 0 7px rgba(129,140,248,.28);position:relative;z-index:1"></div>
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:11px;color:var(--cream);margin-bottom:5px;line-height:1.25">Dependency<br>Transfer</div>
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:10px;color:var(--muted);line-height:1.5">Cognitive load shifts.<br>Aurora becomes structural.</div>
+              </div>
+              <!-- Month 3 -->
+              <div style="text-align:center;padding:0 8px">
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Month 3</div>
+                <div style="width:13px;height:13px;border-radius:50%;border:1px solid var(--gold);background:rgba(184,145,74,.18);margin:0 auto 13px;box-shadow:0 0 10px rgba(184,145,74,.45);position:relative;z-index:1"></div>
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:11px;color:var(--cream);margin-bottom:5px;line-height:1.25">Indispensability</div>
+                <div style="font-family:-apple-system,system-ui,sans-serif;font-size:10px;color:var(--muted);line-height:1.5">Can't remember before.<br>Referral follows.</div>
+              </div>
             </div>
           </div>
         </div>
@@ -822,6 +894,72 @@ flowchart LR
         <p style="font-family:-apple-system,system-ui,sans-serif;font-size:13px;color:var(--muted);line-height:1.65">For the 100→500 phase, this is the infrastructure layer that converts the referral architecture from a philosophy into an operating system — scoring which relationships have the highest gravitational pull, where a single introduction compounds most efficiently, and which members are positioned to become the most powerful acquisition nodes in the network.</p>
       </div>
     </div>
+
+    <!-- Social Gravity Constellation Map -->
+    <div class="fi d5" style="margin-top:24px;padding:28px 32px;background:rgba(45,212,191,.025);border:1px solid rgba(45,212,191,.10);border-radius:12px">
+      <div style="font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:18px;display:flex;align-items:center;gap:10px"><span style="width:16px;height:1px;background:var(--teal);display:inline-block;opacity:.6"></span>Social Gravity · Referral Tree Visualization</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 140" style="width:100%;height:auto;display:block">
+        <defs>
+          <radialGradient id="sg-core" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="sg-glow">
+            <feGaussianBlur stdDeviation="2.5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- Core halo -->
+        <circle cx="330" cy="62" r="22" fill="url(#sg-core)"/>
+        <!-- Core node -->
+        <circle cx="330" cy="62" r="9" fill="rgba(45,212,191,.15)" stroke="#2dd4bf" stroke-width="1.4" filter="url(#sg-glow)"/>
+        <circle cx="330" cy="62" r="4" fill="rgba(45,212,191,.55)" stroke="none"/>
+        <!-- Branch 1: upper-left (Investor network) -->
+        <line x1="322" y1="54" x2="193" y2="24" stroke="rgba(45,212,191,.22)" stroke-width="0.9"/>
+        <circle cx="188" cy="22" r="6" fill="rgba(45,212,191,.10)" stroke="#2dd4bf" stroke-width="0.9" filter="url(#sg-glow)"/>
+        <!-- B1 children -->
+        <line x1="183" y1="18" x2="100" y2="8" stroke="rgba(45,212,191,.14)" stroke-width="0.65"/>
+        <circle cx="96" cy="7" r="3.5" fill="rgba(45,212,191,.18)" stroke="#2dd4bf" stroke-width="0.7"/>
+        <line x1="184" y1="22" x2="96" y2="26" stroke="rgba(45,212,191,.14)" stroke-width="0.65"/>
+        <circle cx="92" cy="26" r="3" fill="rgba(45,212,191,.14)" stroke="#2dd4bf" stroke-width="0.65"/>
+        <line x1="186" y1="26" x2="104" y2="42" stroke="rgba(45,212,191,.11)" stroke-width="0.6"/>
+        <circle cx="101" cy="44" r="2.5" fill="rgba(45,212,191,.11)" stroke="#2dd4bf" stroke-width="0.6"/>
+        <!-- B1 grandchildren (outermost ring) -->
+        <line x1="93" y1="5" x2="38" y2="10" stroke="rgba(45,212,191,.08)" stroke-width="0.5"/>
+        <circle cx="35" cy="10" r="2" fill="rgba(45,212,191,.10)" stroke="#2dd4bf" stroke-width="0.5"/>
+        <line x1="89" y1="26" x2="32" y2="28" stroke="rgba(45,212,191,.07)" stroke-width="0.5"/>
+        <circle cx="29" cy="28" r="2" fill="rgba(45,212,191,.09)" stroke="#2dd4bf" stroke-width="0.5"/>
+        <!-- Branch 2: right (Hospitality network) -->
+        <line x1="339" y1="62" x2="472" y2="24" stroke="rgba(45,212,191,.22)" stroke-width="0.9"/>
+        <circle cx="477" cy="22" r="6" fill="rgba(45,212,191,.10)" stroke="#2dd4bf" stroke-width="0.9" filter="url(#sg-glow)"/>
+        <!-- B2 children -->
+        <line x1="482" y1="18" x2="564" y2="8" stroke="rgba(45,212,191,.14)" stroke-width="0.65"/>
+        <circle cx="568" cy="7" r="3.5" fill="rgba(45,212,191,.18)" stroke="#2dd4bf" stroke-width="0.7"/>
+        <line x1="482" y1="23" x2="567" y2="26" stroke="rgba(45,212,191,.14)" stroke-width="0.65"/>
+        <circle cx="571" cy="26" r="3" fill="rgba(45,212,191,.14)" stroke="#2dd4bf" stroke-width="0.65"/>
+        <!-- B2 grandchildren -->
+        <line x1="571" y1="6" x2="624" y2="10" stroke="rgba(45,212,191,.08)" stroke-width="0.5"/>
+        <circle cx="627" cy="10" r="2" fill="rgba(45,212,191,.10)" stroke="#2dd4bf" stroke-width="0.5"/>
+        <line x1="573" y1="26" x2="626" y2="28" stroke="rgba(45,212,191,.07)" stroke-width="0.5"/>
+        <circle cx="629" cy="28" r="2" fill="rgba(45,212,191,.09)" stroke="#2dd4bf" stroke-width="0.5"/>
+        <!-- Branch 3: lower (Athlete/Cultural network) -->
+        <line x1="330" y1="71" x2="330" y2="104" stroke="rgba(129,140,248,.25)" stroke-width="0.9"/>
+        <circle cx="330" cy="109" r="6" fill="rgba(129,140,248,.10)" stroke="#818cf8" stroke-width="0.9" filter="url(#sg-glow)"/>
+        <!-- B3 children -->
+        <line x1="325" y1="113" x2="218" y2="128" stroke="rgba(129,140,248,.15)" stroke-width="0.65"/>
+        <circle cx="214" cy="130" r="3.5" fill="rgba(129,140,248,.16)" stroke="#818cf8" stroke-width="0.7"/>
+        <line x1="335" y1="113" x2="442" y2="128" stroke="rgba(129,140,248,.15)" stroke-width="0.65"/>
+        <circle cx="446" cy="130" r="3.5" fill="rgba(129,140,248,.16)" stroke="#818cf8" stroke-width="0.7"/>
+        <line x1="330" y1="114" x2="330" y2="130" stroke="rgba(129,140,248,.12)" stroke-width="0.6"/>
+        <circle cx="330" cy="133" r="2.5" fill="rgba(129,140,248,.14)" stroke="#818cf8" stroke-width="0.6"/>
+        <!-- Node labels -->
+        <text x="330" y="80" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="7" fill="rgba(45,212,191,.6)" letter-spacing="0.1em">AURORA MEMBER</text>
+        <text x="188" y="36" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="6.5" fill="rgba(45,212,191,.45)" letter-spacing="0.05em">Investor</text>
+        <text x="477" y="36" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="6.5" fill="rgba(45,212,191,.45)" letter-spacing="0.05em">Hospitality</text>
+        <text x="330" y="122" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="6.5" fill="rgba(129,140,248,.45)" letter-spacing="0.05em">Cultural</text>
+      </svg>
+      <div style="font-family:-apple-system,system-ui,sans-serif;font-size:10px;color:var(--dim);margin-top:12px;text-align:center;letter-spacing:.06em">Each node is a warm introduction. Each branch compounds exponentially from there.</div>
+    </div>
   </div>
 </section>
 
@@ -831,7 +969,22 @@ flowchart LR
     <div class="slabel fi">07 — Three Activations</div>
     <h2 class="big fi">Concepts ready<br>for <em>discussion.</em></h2>
     <p class="fi d1" style="max-width:520px;color:var(--muted);font-family:-apple-system,system-ui,sans-serif;font-size:15px;margin-bottom:8px">Not hypothetical. Each draws on existing relationships and proven formats — adapted specifically for Aurora's founding member acquisition strategy.</p>
-    <div class="act-grid fi d2">
+
+    <!-- Section 07 Hero Photography -->
+    <div class="fi d2" style="position:relative;height:260px;border-radius:12px;overflow:hidden;margin-bottom:40px">
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80"
+        alt="Private Dining"
+        style="width:100%;height:100%;object-fit:cover;object-position:center 55%;filter:brightness(.62) contrast(1.08) saturate(.85);display:block"
+      />
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,3,10,.1) 0%,rgba(3,3,10,.72) 100%)"></div>
+      <div style="position:absolute;bottom:20px;left:24px;right:24px;display:flex;align-items:flex-end;justify-content:space-between">
+        <div style="font-family:-apple-system,system-ui,sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,228,220,.38)">Private Dining · Invitation Only</div>
+        <div style="font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,145,74,.5)">Aurora Activation Format</div>
+      </div>
+    </div>
+
+    <div class="act-grid fi d3">
       <div class="act-card">
         <div class="act-num">Activation 01</div>
         <div class="act-label">Member Acquisition</div>
@@ -866,7 +1019,17 @@ flowchart LR
     <div class="g2 fi d2">
       <div>
         <div class="card cp" style="margin-bottom:16px"><div class="ml">Brand Voice</div><h3>Decisive · Unhurried · Specific</h3><p class="cb" style="margin-top:10px">No hedging. No superlatives. The tone of someone who has already arrived at confidence — not someone performing it.</p></div>
-        <div class="card"><div class="ml">Visual Language</div><h3>Dark Ground · Light Touch</h3><p class="cb" style="margin-top:10px">Negative space does the work. No visual noise, no texture for texture's sake. Every element earns its position.</p></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch">
+          <div class="card" style="display:flex;flex-direction:column;justify-content:center"><div class="ml">Visual Language</div><h3>Dark Ground · Light Touch</h3><p class="cb" style="margin-top:10px">Negative space does the work. No visual noise, no texture for texture's sake. Every element earns its position.</p></div>
+          <div style="border-radius:12px;overflow:hidden;min-height:140px;position:relative">
+            <img
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=85"
+              alt="Dark material texture"
+              style="width:100%;height:100%;object-fit:cover;filter:brightness(.55) contrast(1.12) saturate(.6);display:block"
+            />
+            <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(3,3,10,.35) 0%,rgba(3,3,10,.1) 100%)"></div>
+          </div>
+        </div>
       </div>
       <div>
         <div class="card" style="margin-bottom:16px"><div class="ml">Narrative Structure</div><h3>Show the outcome, not the feature</h3><p class="cb" style="margin-top:10px">The story is what becomes possible when the friction is removed. The dinner you actually enjoyed because you didn't plan it. The weekend that happened because someone anticipated you'd want it.</p></div>
@@ -882,7 +1045,7 @@ flowchart LR
     <div class="slabel fi" style="justify-content:center">09 — The Close</div>
     <h2 class="big fi" style="margin:0 auto 28px">The network<br>is already <em>there.</em></h2>
     <p class="fi d1" style="font-size:17px;line-height:1.78;color:var(--cream);margin-bottom:20px">I've spent the better part of a decade building brand gravity for things that can't be advertised — regulated platforms, illiquid assets, products that live or die by word of mouth in rooms you can't buy your way into.</p>
-    <p class="fi d2" style="font-size:16px;line-height:1.78;color:var(--muted);margin-bottom:44px">The Prestiger advisory board includes the chairs of Messika and Christian Louboutin, and the former CEO of Omega North America. I've secured a $300M capital commitment for a cross-border mortgage company, marketed 100-carat diamonds, and sold seven-figure wine portfolios. Deep relationships run through the premium concierge ecosystem, ultra-luxury event production, and a wine network that stretches from the world's best winemakers to the family offices that collect them. The network I'd bring to Aurora isn't something I'd need to go build. It's already there.</p>
+    <p class="fi d2" style="font-size:16px;line-height:1.78;color:var(--muted);margin-bottom:44px">The Prestigier advisory board includes the chairs of Messika and Christian Louboutin, and the former CEO of Omega North America. I've secured a $300M capital commitment for a cross-border mortgage company, marketed 100-carat diamonds, and sold seven-figure wine portfolios. Deep relationships run through the premium concierge ecosystem, ultra-luxury event production, and a wine network that stretches from the world's best winemakers to the family offices that collect them. The network I'd bring to Aurora isn't something I'd need to go build. It's already there.</p>
 
     <div class="fi d3" style="display:flex;gap:18px;justify-content:center;margin-bottom:52px;flex-wrap:wrap">
       <div class="card" style="padding:20px 26px;text-align:left;min-width:155px"><div class="sn gt">$40B+</div><div class="sl">Closed Sales Volume<br>Across 8+ Countries</div></div>
@@ -1341,30 +1504,53 @@ window.addEventListener('load',function(){
         tspan(mt,ln,mx,li===0?(mlines.length>1?`-${W*0.0082}px`:'0'):`${W*0.0175}px`);
       });
 
-      // Hover
-      mc.addEventListener('mouseenter',()=>{
-        mc.setAttribute('fill',hexRgba(sec.color,0.20));
-        mc.setAttribute('stroke-width','1.5');
-        mc.setAttribute('opacity','1');
-        mt.setAttribute('fill','rgba(232,228,220,1)');
-      });
-      mc.addEventListener('mouseleave',()=>{
-        mc.setAttribute('fill',hexRgba(sec.color,0.07));
-        mc.setAttribute('stroke-width','0.9');
-        mc.setAttribute('opacity','0.82');
-        mt.setAttribute('fill',CREAM);
-      });
+      // Store refs for hover wiring after center label is created
+      mc._sec=sec; mc._mt=mt;
     });
 
     // Center glow
     mk('circle',{cx,cy,r:rc0*2.4,fill:'url(#bwcg)',stroke:'none'},svg);
     mk('circle',{cx,cy,r:rc0*1.22,fill:'none',stroke:hexRgba(TEAL,0.15),'stroke-width':'0.6'},svg);
     // Center circle
-    mk('circle',{cx,cy,r:rc0,fill:'rgba(3,3,10,0.94)',stroke:hexRgba(TEAL,0.45),'stroke-width':'1.3'},svg);
-    // Center label
-    mk('text',{x:cx,y:cy-3,'text-anchor':'middle','dominant-baseline':'middle',
+    const centerCircle=mk('circle',{cx,cy,r:rc0,fill:'rgba(3,3,10,0.94)',stroke:hexRgba(TEAL,0.45),'stroke-width':'1.3'},svg);
+    // Center label (interactive)
+    const centerLbl=mk('text',{x:cx,y:cy,'text-anchor':'middle','dominant-baseline':'middle',
       fill:'rgba(232,228,220,0.92)','font-family':'Playfair Display,Georgia,serif',
-      'font-size':`${W*0.024}px`,'letter-spacing':'0.04em'},svg).textContent='Brand';
+      'font-size':`${W*0.024}px`,'letter-spacing':'0.04em','pointer-events':'none'},svg);
+    centerLbl.textContent='Brand';
+
+    // Wire all sector hover handlers now that centerLbl + centerCircle exist
+    svg.querySelectorAll('circle[cursor="pointer"]').forEach((mc)=>{
+      const sec=mc._sec, mt=mc._mt;
+      if(!sec)return;
+      const secName=sec.name.replace('\n',' ');
+      mc.addEventListener('mouseenter',()=>{
+        mc.setAttribute('fill',hexRgba(sec.color,0.22));
+        mc.setAttribute('stroke-width','1.6');
+        mc.setAttribute('opacity','1');
+        mt.setAttribute('fill','rgba(232,228,220,1)');
+        centerLbl.textContent=secName;
+        centerLbl.setAttribute('fill',sec.color);
+        centerLbl.setAttribute('font-size',`${W*0.021}px`);
+        centerLbl.setAttribute('font-family','-apple-system,system-ui,sans-serif');
+        centerLbl.setAttribute('letter-spacing','0.04em');
+        centerCircle.setAttribute('stroke',sec.color);
+        centerCircle.setAttribute('stroke-width','1.8');
+      });
+      mc.addEventListener('mouseleave',()=>{
+        mc.setAttribute('fill',hexRgba(sec.color,0.07));
+        mc.setAttribute('stroke-width','0.9');
+        mc.setAttribute('opacity','0.82');
+        mt.setAttribute('fill',CREAM);
+        centerLbl.textContent='Brand';
+        centerLbl.setAttribute('fill','rgba(232,228,220,0.92)');
+        centerLbl.setAttribute('font-size',`${W*0.024}px`);
+        centerLbl.setAttribute('font-family','Playfair Display,Georgia,serif');
+        centerLbl.setAttribute('letter-spacing','0.04em');
+        centerCircle.setAttribute('stroke',hexRgba(TEAL,0.45));
+        centerCircle.setAttribute('stroke-width','1.3');
+      });
+    });
 
     wrap.appendChild(svg);
   }
