@@ -320,7 +320,25 @@
       .gp-bridge{flex-direction:row;padding:16px 0;height:auto}
       .gp-bridge-line{width:40px;height:1px}
     }
-  </style>
+  
+    /* ── VERTICAL TIMELINE ── */
+    .vtl-wrap{max-width:780px;margin:64px auto 0}
+    .vtl-header{text-align:center;margin-bottom:48px}
+    .vtl{position:relative;padding-bottom:12px}
+    .vtl::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent 0%,rgba(45,212,191,.25) 6%,rgba(45,212,191,.25) 94%,transparent 100%);transform:translateX(-50%)}
+    .vtl-step{display:grid;grid-template-columns:1fr 60px 1fr;min-height:100px;align-items:flex-start}
+    .vtl-node{display:flex;flex-direction:column;align-items:center;padding-top:4px;position:relative;z-index:2}
+    .vtl-dot{width:11px;height:11px;border-radius:50%;background:var(--teal);box-shadow:0 0 16px rgba(45,212,191,.55);border:1px solid rgba(45,212,191,.5)}
+    .vtl-dot-gold .vtl-dot{background:var(--gold);box-shadow:0 0 20px rgba(184,145,74,.6);border-color:rgba(184,145,74,.55)}
+    .vtl-spacer{display:block}
+    .vtl-content{padding-bottom:32px}
+    .vtl-step.left .vtl-content{text-align:right;padding-right:30px}
+    .vtl-step.right .vtl-content{text-align:left;padding-left:30px}
+    .vtl-label{font-family:-apple-system,system-ui,sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);opacity:.65;margin-bottom:7px}
+    .vtl-title{font-size:18px;font-weight:400;letter-spacing:-.01em;color:var(--cream);margin-bottom:9px;line-height:1.18}
+    .vtl-body{font-family:-apple-system,system-ui,sans-serif;font-size:12px;line-height:1.75;color:var(--muted)}
+
+    </style>
 </head>
 <body>
 
@@ -380,10 +398,71 @@
     <blockquote class="pq fi d2">"At Aurora's price point, the first 100 members aren't just revenue. They're the referral engine. They're the proof point. They're the brand."</blockquote>
     <div class="g3 fi d3">
       <div class="card"><div class="cl">Insight 01</div><h3>The network effect starts now</h3><p class="cb" style="margin-top:10px">Every founding member who talks about Aurora is worth more than any campaign. The first cohort sets the social proof that makes the next 400 inevitable.</p></div>
-      <div class="card"><div class="cl">Insight 02</div><h3>Wrong members slow growth</h3><p class="cb" style="margin-top:10px">A UHNW product with mid-market early adopters creates cognitive dissonance that's nearly impossible to unwind. Identity consistency at launch is non-negotiable.</p></div>
+      <div class="card"><div class="cl">Insight 02</div><h3>The wrong members stall growth</h3><p class="cb" style="margin-top:10px">A UHNW product with mid-market early adopters creates cognitive dissonance that's nearly impossible to unwind. Identity consistency at launch is non-negotiable.</p></div>
       <div class="card"><div class="cl">Insight 03</div><h3>Scarcity requires selectivity</h3><p class="cb" style="margin-top:10px">Aurora's desirability depends on the perception that not everyone belongs here. Onboarding is as important as acquisition.</p></div>
     </div>
   </div>
+
+    <!-- CENTRED VERTICAL TIMELINE — Road to 100 -->
+    <div class="vtl-wrap fi d2">
+      <div class="vtl-header">
+        <div class="slabel vis" style="justify-content:center;opacity:1;transform:none;margin-bottom:12px">The Path to 100</div>
+        <p style="color:var(--muted);font-family:-apple-system,system-ui,sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase">A 90-day activation against infrastructure that already exists</p>
+      </div>
+      <div class="vtl">
+
+        <div class="vtl-step left">
+          <div class="vtl-content">
+            <div class="vtl-label">Days 1 – 14</div>
+            <div class="vtl-title">Intelligence Sweep</div>
+            <div class="vtl-body">Every name on the waitlist profiled — conversion likelihood, social graph, referral potential. The first 30 conversations are already here.</div>
+          </div>
+          <div class="vtl-node"><div class="vtl-dot"></div></div>
+          <div class="vtl-spacer"></div>
+        </div>
+
+        <div class="vtl-step right">
+          <div class="vtl-spacer"></div>
+          <div class="vtl-node"><div class="vtl-dot"></div></div>
+          <div class="vtl-content">
+            <div class="vtl-label">Days 15 – 30</div>
+            <div class="vtl-title">First Conversations</div>
+            <div class="vtl-body">Warm outreach to the 15–20 highest-fit prospects. Founding Member Preview scoped, venue locked, invites in hand.</div>
+          </div>
+        </div>
+
+        <div class="vtl-step left">
+          <div class="vtl-content">
+            <div class="vtl-label">Days 31 – 60</div>
+            <div class="vtl-title">First Wave Activations</div>
+            <div class="vtl-body">Estate dinner executed. Aurora experienced — not pitched. Network warm introductions live across real estate, hospitality, and lifestyle channels.</div>
+          </div>
+          <div class="vtl-node"><div class="vtl-dot"></div></div>
+          <div class="vtl-spacer"></div>
+        </div>
+
+        <div class="vtl-step right">
+          <div class="vtl-spacer"></div>
+          <div class="vtl-node"><div class="vtl-dot"></div></div>
+          <div class="vtl-content">
+            <div class="vtl-label">Days 61 – 75</div>
+            <div class="vtl-title">Channel Scale</div>
+            <div class="vtl-body">Corporate perquisite pipeline opens. Hospitality partner programs live. Referral architecture seeded from founding cohort.</div>
+          </div>
+        </div>
+
+        <div class="vtl-step left">
+          <div class="vtl-content">
+            <div class="vtl-label">Days 76 – 90</div>
+            <div class="vtl-title">100 Founding Members</div>
+            <div class="vtl-body">Every member admitted through the full identity ritual. The referral engine is live. The 100→500 architecture begins immediately.</div>
+          </div>
+          <div class="vtl-node vtl-dot-gold"><div class="vtl-dot"></div></div>
+          <div class="vtl-spacer"></div>
+        </div>
+
+      </div>
+    </div>
 </section>
 
 <!-- ══ 02 THESIS ══ -->
@@ -626,7 +705,7 @@
       <div class="ncc">
         <div class="ncc-cat" style="color:var(--gold)">Layer Four · The Referral Flywheel</div>
         <div class="ncc-cap">At 100 founding members, Aurora has social proof. At 500, it has a brand that no longer requires an acquisition strategy.</div>
-        <p class="ncc-body">Athletes and investors in the network — Kevin Love, Kyle Kuzma, Kiernan Dewsbury-Hall, Koro Capital, Insiders VC, Boost Capital Partners — provide authentic distribution through individuals whose lifestyle is the product argument. One credible share within these networks generates more qualified interest than any media program. The flywheel is designed so that founding-member selection drives it: the right first 100 are chosen specifically because they talk, because their peer group is Aurora's next cohort, and because their endorsement is worth more than the membership fee by an order of magnitude.</p>
+        <p class="ncc-body">Athletes and investors already in Aurora's network provide authentic distribution through individuals whose lifestyle is the product argument. One credible share within these networks generates more qualified interest than any media program. The flywheel is designed so that founding-member selection drives it: the right first 100 are chosen specifically because they talk, because their peer group is Aurora's next cohort, and because their endorsement is worth more than the membership fee by an order of magnitude.</p>
         <div class="ncc-links">
           <span class="ncc-link">→ Athlete Network</span>
           <span class="ncc-link">→ Investor Distribution</span>
@@ -733,7 +812,7 @@
       <div class="ch-item">
         <div class="ch-n">Ch. 05</div>
         <div class="ch-title">Investor &<br>Athlete Network</div>
-        <div class="ch-sub">Kevin Love · Kuzma · KDH. One authentic share beats any campaign.</div>
+        <div class="ch-sub">Athletes and investors whose lifestyle is the argument. One authentic share beats any campaign.</div>
       </div>
     </div>
   </div>
@@ -1019,17 +1098,7 @@ flowchart LR
     <div class="g2 fi d2">
       <div>
         <div class="card cp" style="margin-bottom:16px"><div class="ml">Brand Voice</div><h3>Decisive · Unhurried · Specific</h3><p class="cb" style="margin-top:10px">No hedging. No superlatives. The tone of someone who has already arrived at confidence — not someone performing it.</p></div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch">
-          <div class="card" style="display:flex;flex-direction:column;justify-content:center"><div class="ml">Visual Language</div><h3>Dark Ground · Light Touch</h3><p class="cb" style="margin-top:10px">Negative space does the work. No visual noise, no texture for texture's sake. Every element earns its position.</p></div>
-          <div style="border-radius:12px;overflow:hidden;min-height:140px;position:relative">
-            <img
-              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=85"
-              alt="Dark material texture"
-              style="width:100%;height:100%;object-fit:cover;filter:brightness(.55) contrast(1.12) saturate(.6);display:block"
-            />
-            <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(3,3,10,.35) 0%,rgba(3,3,10,.1) 100%)"></div>
-          </div>
-        </div>
+        <div class="card"><div class="ml">Visual Language</div><h3>Dark Ground · Light Touch</h3><p class="cb" style="margin-top:10px">Negative space does the work. No visual noise, no texture for texture's sake. Every element earns its position.</p></div>
       </div>
       <div>
         <div class="card" style="margin-bottom:16px"><div class="ml">Narrative Structure</div><h3>Show the outcome, not the feature</h3><p class="cb" style="margin-top:10px">The story is what becomes possible when the friction is removed. The dinner you actually enjoyed because you didn't plan it. The weekend that happened because someone anticipated you'd want it.</p></div>
@@ -1045,7 +1114,7 @@ flowchart LR
     <div class="slabel fi" style="justify-content:center">09 — The Close</div>
     <h2 class="big fi" style="margin:0 auto 28px">The network<br>is already <em>there.</em></h2>
     <p class="fi d1" style="font-size:17px;line-height:1.78;color:var(--cream);margin-bottom:20px">I've spent the better part of a decade building brand gravity for things that can't be advertised — regulated platforms, illiquid assets, products that live or die by word of mouth in rooms you can't buy your way into.</p>
-    <p class="fi d2" style="font-size:16px;line-height:1.78;color:var(--muted);margin-bottom:44px">The Prestigier advisory board includes the chairs of Messika and Christian Louboutin, and the former CEO of Omega North America. I've secured a $300M capital commitment for a cross-border mortgage company, marketed 100-carat diamonds, and sold seven-figure wine portfolios. Deep relationships run through the premium concierge ecosystem, ultra-luxury event production, and a wine network that stretches from the world's best winemakers to the family offices that collect them. The network I'd bring to Aurora isn't something I'd need to go build. It's already there.</p>
+    <p class="fi d2" style="font-size:16px;line-height:1.78;color:var(--muted);margin-bottom:44px">The Prestigier advisory board includes the chairs of Messika and Christian Louboutin, and the former CEO of Omega North America. I've secured a $300M capital commitment for a cross-border mortgage company, marketed 100-carat diamonds, and sold seven-figure wine portfolios. Deep relationships run through the premium concierge ecosystem, ultra-luxury event production, and a wine network that stretches from the world's best winemakers to the family offices that collect them. The network I bring to Aurora isn't something I'd need to build. It's already deployed.</p>
 
     <div class="fi d3" style="display:flex;gap:18px;justify-content:center;margin-bottom:52px;flex-wrap:wrap">
       <div class="card" style="padding:20px 26px;text-align:left;min-width:155px"><div class="sn gt">$40B+</div><div class="sl">Closed Sales Volume<br>Across 8+ Countries</div></div>
@@ -1239,7 +1308,7 @@ window.addEventListener('load',function(){
     {id:'re',label:'Luxury RE\nNetwork',angle:-18,color:'#818cf8',detail:'$40B+ in closed volume across 8+ countries. SERHANT., Douglas Elliman, Christie\'s, Royal LePage. The $10M+ home close is the exact Aurora moment.'},
     {id:'concierge',label:'Concierge\nChannel',angle:54,color:'#34d399',detail:'Premium concierge relationships including Vertu Ruby Key. Clients who have already self-selected for exactly this price point — warm introductions, not cold outreach.'},
     {id:'hospitality',label:'Hospitality &\nWine Network',angle:126,color:'#2dd4bf',detail:'Four Seasons, Ritz, Auberge, Aman. Plus winemaker network: Philippe Melka, HALL, Penfolds, Shafer. The gatherings where founding members live.'},
-    {id:'investor',label:'Investor &\nAthlete Network',angle:198,color:'#b8914a',detail:'Kevin Love, Kyle Kuzma, KDH. Distribution channels, not just cap table names. WealthQuotient for institutional/PE pathways.'},
+    {id:'investor',label:'Investor &\nAthlete Network',angle:198,color:'#b8914a',detail:'Athletes and investors aligned with Aurora\'s positioning. WealthQuotient maps institutional pathways.'},
   ];
 
   const svg=d3.select('#channel-map').append('svg').attr('width',W).attr('height',H);
@@ -1323,7 +1392,7 @@ window.addEventListener('load',function(){
   rc.rectangle(40,40,W*.43-20,H-80,{stroke:teal,strokeWidth:1.1,roughness:2.2,fill:'rgba(45,212,191,.012)',fillStyle:'solid'});
   txt('PHASE 01 — ACTIVATION',P1,34,{color:teal,font:'9px -apple-system,sans-serif'});
   txt('0 → 100 Members',P1,64,{color:cream,font:'bold 13px Georgia,serif'});
-  [['Waitlist Activation','Founding moment',teal],['Luxury RE Network','$40B+ · 8 countries',purple],['Concierge Channel','Vertu Ruby Key · warm',teal],['Hospitality Network','Four Seasons · Wine estates',purple],['Investor Network','Kevin Love · KDH · Kuzma',gold]].forEach((c,i)=>bx(P1,104+i*62,225,44,c[2],c[0],c[1]));
+  [['Waitlist Activation','Founding moment',teal],['Luxury RE Network','$40B+ · 8 countries',purple],['Concierge Channel','Vertu Ruby Key · warm',teal],['Hospitality Network','Four Seasons · Wine estates',purple],['Investor Network','Athletes · Operators · Family Offices',gold]].forEach((c,i)=>bx(P1,104+i*62,225,44,c[2],c[0],c[1]));
 
   arr(W*.45,H/2,W*.52,H/2,gold);
   rc.ellipse(W*.505,H/2,56,24,{stroke:gold,strokeWidth:1.4,roughness:1.4,fill:'rgba(184,145,74,.06)',fillStyle:'solid'});
