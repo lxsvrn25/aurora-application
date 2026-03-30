@@ -338,6 +338,173 @@
     .vtl-title{font-size:18px;font-weight:400;letter-spacing:-.01em;color:var(--cream);margin-bottom:9px;line-height:1.18}
     .vtl-body{font-family:-apple-system,system-ui,sans-serif;font-size:12px;line-height:1.75;color:var(--muted)}
 
+    /* ═══════════════════════════════════════════════════
+       LUXURY VISUAL ELEVATION · AURORA 2026
+       ═══════════════════════════════════════════════════ */
+
+    /* — Shimmer keyframe — */
+    @keyframes metalShimmer {
+      0%   { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+
+    /* — Hero headline: platinum shimmer — */
+    .hero-h1 {
+      background: linear-gradient(90deg,
+        #c8c6c4 0%,
+        #f0eee8 20%,
+        #ffffff 35%,
+        #e4e2de 50%,
+        #ffffff 65%,
+        #f0eee8 80%,
+        #c8c6c4 100%
+      );
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: metalShimmer 9s linear infinite;
+    }
+
+    /* — Italic emphasis in headings: teal shimmer — */
+    h2.big em {
+      background: linear-gradient(90deg,
+        var(--teal) 0%,
+        #9ef2e8 30%,
+        var(--cream) 50%,
+        #9ef2e8 70%,
+        var(--teal) 100%
+      );
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-style: italic;
+      animation: metalShimmer 7s linear infinite;
+    }
+
+    /* — Slabel line: gradient fade instead of flat — */
+    .slabel::before {
+      background: linear-gradient(90deg, var(--teal), rgba(45,212,191,.15)) !important;
+      opacity: 1 !important;
+    }
+
+    /* — Section ambient glow halos — */
+    #hero::after,
+    #thesis::after,
+    #network::after,
+    #hundred::after,
+    #close::after {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      border-radius: 50%;
+      filter: blur(130px);
+      z-index: 0;
+    }
+    #hero::after {
+      width: 720px; height: 480px;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse, rgba(45,212,191,.11), transparent 70%);
+    }
+    #thesis::after {
+      width: 580px; height: 520px;
+      top: 5%; right: -60px;
+      background: radial-gradient(ellipse, rgba(129,140,248,.09), transparent 70%);
+    }
+    #network::after {
+      width: 560px; height: 480px;
+      top: 15%; left: -60px;
+      background: radial-gradient(ellipse, rgba(45,212,191,.08), transparent 70%);
+    }
+    #hundred::after {
+      width: 500px; height: 440px;
+      bottom: 5%; right: 0;
+      background: radial-gradient(ellipse, rgba(184,145,74,.1), transparent 70%);
+    }
+    #close::after {
+      width: 800px; height: 380px;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse, rgba(45,212,191,.09), transparent 65%);
+    }
+
+    /* — Card: elevated hover glow — */
+    .card:hover {
+      box-shadow: 0 0 44px rgba(45,212,191,.09), 0 8px 40px rgba(0,0,0,.45) !important;
+      border-color: rgba(255,255,255,.18) !important;
+    }
+    .card.ct:hover { box-shadow: 0 0 44px rgba(45,212,191,.14), 0 8px 40px rgba(0,0,0,.45) !important; }
+    .card.cg:hover { box-shadow: 0 0 44px rgba(184,145,74,.14), 0 8px 40px rgba(0,0,0,.45) !important; }
+
+    /* — Pull quote: gradient left border — */
+    .pq {
+      border-left: none !important;
+      position: relative;
+    }
+    .pq::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--teal) 0%, var(--gold) 60%, rgba(184,145,74,.08) 100%);
+      border-radius: 2px;
+    }
+
+    /* — Footer: gradient top border — */
+    footer {
+      border-top: 1px solid transparent !important;
+      position: relative;
+    }
+    footer::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(45,212,191,.22) 30%,
+        rgba(184,145,74,.18) 70%,
+        transparent 100%
+      );
+    }
+
+    /* — Noise grain texture overlay — */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: .022;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* — Progress bar: enhanced gradient — */
+    #prog {
+      background: linear-gradient(90deg, var(--teal), var(--gold), var(--purple)) !important;
+      background-size: 200% 100% !important;
+      animation: metalShimmer 4s linear infinite;
+      height: 1.5px !important;
+    }
+
+    /* — Nav bottom border: gradient — */
+    nav {
+      border-bottom: 1px solid transparent !important;
+      background-image:
+        linear-gradient(rgba(3,3,10,.6), rgba(3,3,10,.6)),
+        linear-gradient(90deg, transparent, rgba(45,212,191,.18), rgba(184,145,74,.12), transparent);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+    }
+
+
     </style>
 </head>
 <body>
